@@ -12,4 +12,6 @@ Gli allenamenti sono modificabili in `data/workouts.json`. `js/workouts.js` cont
 
 ## Compatibilità
 
-Il target verificato è iPad Air con iOS 12.5.7 / Safari 12. Il codice applicativo usa sintassi ES5, `service-worker.js` per l'uso offline e `localStorage` per i dati. `legacy.html` usa AppCache soltanto come fallback per browser precedenti senza service worker, evitando due sistemi di cache contemporaneamente sulla pagina principale.
+Il target verificato è iPad Air con iOS 12.5.7 / Safari 12. Il codice applicativo usa sintassi ES5, `service-worker.js` per l'uso offline e `localStorage` per dati e sessione in corso. `legacy.html` usa AppCache soltanto come fallback per browser precedenti senza service worker, evitando due sistemi di cache contemporaneamente sulla pagina principale.
+
+Versione applicazione: 3.0.0 (25/08/2026). Include autosalvataggio e ripristino, schermata riscaldamento, note per esercizio, timer con preavvisi, impostazioni audio e controllo aggiornamenti.
