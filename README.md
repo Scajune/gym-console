@@ -14,4 +14,4 @@ Gli allenamenti sono modificabili in `data/workouts.json`. `js/workouts.js` cont
 
 Il target verificato è iPad Air con iOS 12.5.7 / Safari 12. Il codice applicativo usa sintassi ES5, `service-worker.js` per l'uso offline e `localStorage` per dati e sessione in corso. `legacy.html` usa AppCache soltanto come fallback per browser precedenti senza service worker, evitando due sistemi di cache contemporaneamente sulla pagina principale.
 
-Versione applicazione: 3.0.0 (25/08/2026). Include autosalvataggio e ripristino, schermata riscaldamento, note per esercizio, timer con preavvisi, impostazioni audio e controllo aggiornamenti.
+Versione applicazione: 3.1.0 (27/08/2026). Include il frontend “gym control console”, layout allenamento ottimizzato per 1024×768, guide esercizio predisposte per GIF locali, timer visuale e viste storico/progressi compatte. Storage, timer interno e progressione restano compatibili con la versione precedente.

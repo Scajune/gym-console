@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v3 - solo fallback legacy senza service worker
+# v4 - nuovo frontend, fallback legacy senza service worker
 CACHE:
 index.html
 legacy.html

@@ -23,5 +23,23 @@
       ]}
     }
   };
-  global.GymWorkouts={data:fallback,load:function(callback){var xhr=new XMLHttpRequest();xhr.open('GET','data/workouts.json',true);xhr.onreadystatechange=function(){if(xhr.readyState===4){if(xhr.status===200||xhr.status===0){try{global.GymWorkouts.data=JSON.parse(xhr.responseText);}catch(e){}}callback(global.GymWorkouts.data);}};try{xhr.send();}catch(e){callback(fallback);}}};
+  var assets={
+    'goblet-squat':['goblet-squat.gif','Quadricipiti,Glutei,Core'],
+    'db-bench':['bench-press.gif','Pettorali,Tricipiti,Spalle'],
+    'one-arm-row':['single-arm-row.gif','Dorsali,Romboidi,Bicipiti'],
+    'rdl':['romanian-deadlift.gif','Femorali,Glutei,Erettori spinali'],
+    'lateral-raise':['lateral-raise.gif','Deltoidi laterali'],
+    'curl':['biceps-curl.gif','Bicipiti,Brachiale'],
+    'plank':['plank.gif','Core,Glutei,Spalle'],
+    'reverse-lunge':['reverse-lunge.gif','Quadricipiti,Glutei,Core'],
+    'shoulder-press':['shoulder-press.gif','Spalle,Tricipiti,Core'],
+    'band-pulldown':['lat-pulldown.gif','Dorsali,Bicipiti,Core'],
+    'split-squat':['bulgarian-split-squat.gif','Quadricipiti,Glutei,Core'],
+    'push-up':['push-up.gif','Pettorali,Tricipiti,Core'],
+    'band-pushdown':['triceps-pushdown.gif','Tricipiti'],
+    'dead-bug':['dead-bug.gif','Core,Flessori dell’anca']
+  };
+  function enrich(data){var key,w,i,ex,a;for(key in data.workouts){if(data.workouts.hasOwnProperty(key)){w=data.workouts[key];for(i=0;i<w.exercises.length;i++){ex=w.exercises[i];a=assets[ex.id];if(a){if(!ex.animation){ex.animation='assets/exercises/'+a[0];}if(!ex.muscles){ex.muscles=a[1].split(',');}}}}}return data;}
+  fallback=enrich(fallback);
+  global.GymWorkouts={data:fallback,load:function(callback){var xhr=new XMLHttpRequest();xhr.open('GET','data/workouts.json',true);xhr.onreadystatechange=function(){if(xhr.readyState===4){if(xhr.status===200||xhr.status===0){try{global.GymWorkouts.data=enrich(JSON.parse(xhr.responseText));}catch(e){}}callback(global.GymWorkouts.data);}};try{xhr.send();}catch(e){callback(fallback);}}};
 }(this));

@@ -1,4 +1,4 @@
-var CACHE='gym-console-v3-ios12';
+var CACHE='gym-console-v4-ui2-ios12';
 var FILES=['./','./index.html','./legacy.html','./css/style.css','./js/workouts.js','./js/storage.js','./js/timer.js','./js/app.js','./data/workouts.json','./manifest.json','./icons/icon-180.png','./icons/icon-512.png'];
 self.addEventListener('install',function(event){event.waitUntil(caches.open(CACHE).then(function(cache){return cache.addAll(FILES);}));});
 self.addEventListener('activate',function(event){event.waitUntil(caches.keys().then(function(keys){return Promise.all(keys.map(function(key){if(key!==CACHE){return caches['delete'](key);}}));}).then(function(){return self.clients.claim();}));});
