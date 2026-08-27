@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v6 - programma A/B con GIF esercizi, fallback legacy senza service worker
+# v7 - GIF senza segnaposto, fallback legacy senza service worker
 CACHE:
 index.html
 legacy.html

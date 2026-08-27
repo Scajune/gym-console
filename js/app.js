@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  var APP_VERSION='3.3.0',APP_DATE='27/08/2026';
+  var APP_VERSION='3.3.1',APP_DATE='27/08/2026';
   var view=document.getElementById('view'),title=document.getElementById('title'),subtitle=document.getElementById('appSubtitle'),back=document.getElementById('backButton'),flash=document.getElementById('flash');
   var config=null,current=null,currentExercise=0,timerReturn=null,audioContext=null,lastAnnounced=-1,updateReady=false,registration=null;
 
