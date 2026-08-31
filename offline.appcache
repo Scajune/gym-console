@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v7 - GIF senza segnaposto, fallback legacy senza service worker
+# v8 - Baseline 0, progetto 8 settimane, modalità minima e RIR
 CACHE:
 index.html
 legacy.html
