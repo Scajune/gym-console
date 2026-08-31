@@ -14,6 +14,6 @@ Gli allenamenti sono modificabili in `data/workouts.json`. `js/workouts.js` cont
 
 Il target verificato è iPad Air con iOS 12.5.7 / Safari 12. Il codice applicativo usa sintassi ES5, `service-worker.js` per l'uso offline e `localStorage` per dati e sessione in corso. `legacy.html` usa AppCache soltanto come fallback per browser precedenti senza service worker, evitando due sistemi di cache contemporaneamente sulla pagina principale.
 
-Versione applicazione: 4.0.0 (31/08/2026). Include Baseline 0, progetto di 8 settimane con streak settimanale, modalità minima da circa 20 minuti, micro-progressi e registrazione Facile/Giusta/Dura con RIR facoltativo per ogni serie. Restano inclusi il frontend “gym control console”, le 15 GIF locali e il layout ottimizzato per 1024×768. Storage e storico precedenti vengono migrati in modo compatibile.
+Versione applicazione: 4.0.1 (31/08/2026). Include un pulsante manuale per avviare il timer di recupero direttamente nel pannello delle serie. Restano inclusi Baseline 0, progetto di 8 settimane con streak settimanale, modalità minima da circa 20 minuti, micro-progressi e registrazione Facile/Giusta/Dura con RIR facoltativo. Storage e storico precedenti vengono migrati in modo compatibile.
 
 Programma dati 4.0.0: scheda A/B con priorità dorso, spalle, polpacci e caviglia-gamba; Fase iniziale configurabile; metadati muscolari primari/secondari; attività finale facoltativa di equilibrio monopodalico. Nessuna trazione e nessun aumento automatico del carico.
